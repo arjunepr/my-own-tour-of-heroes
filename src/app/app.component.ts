@@ -12,7 +12,7 @@ import { Hero } from './hero/hero';
       <p>Heroes:</p>
       <ul>
         <li *ngFor="let hero of heroes">
-          <h2>{{ hero.name }} details</h2>
+          <h4>{{ hero.name }} details</h4>
           <div class="details">
             <p><label>id: </label>{{ hero.id }}</p>
             <p><label>name: </label>{{ hero.name }}</p>
