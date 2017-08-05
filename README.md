@@ -1,3 +1,9 @@
+# Note
+This is a modified form of the 'Tour of Heroes' App. Currently a work in progress. Sure, I'm going through the tutorial, but I decided to make this a public repo since I'm making it really different to what I'm _supposed_ to make.
+
+Uses Stylus as a pre-processor.
+
+
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
