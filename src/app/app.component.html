@@ -3,8 +3,8 @@
 
   <h1>{{title}}</h1>
   
-  <div class="details" *ngIf="selectedHero">
-    <h2>{{selectedHero.name}} details</h2>
+  <!-- <div class="details" *ngIf="selectedHero">
+    <h2>'{{selectedHero.name}}' details</h2>
     <div>
       <label>id: </label> {{ selectedHero.id }}
     </div>
@@ -13,11 +13,13 @@
       <label>name: </label>
       <input [(ngModel)]="selectedHero.name" placeholder="name" />
     </div>
-  </div>
+  </div> -->
+
+  <hero-detail [hero]="selectedHero"></hero-detail>
 
   <h3>Heroes:</h3>
   <ul class="heroes">
-    <li class="heroItem" (click)="onSelect(hero)" *ngFor="let hero of heroes">
+    <li class="heroItem" [class.selected]="hero === selectedHero" (click)="onSelect(hero)" *ngFor="let hero of heroes">
       <!-- <div class="details">
         <h4>{{ hero.name }} details</h4>
         <p><label>id: </label>{{ hero.id }}</p>
@@ -29,6 +31,6 @@
        <span class="badge">{{ hero.id }}</span> <span>{{ hero.name }}</span> 
     </li>
   </ul>
-  <p *ngIf="heroes.length > 3">There's quite a few heroes here.</p>
+  <p style="text-align: center" *ngIf="heroes.length > 3">There's quite a few heroes here.</p>
 
 </div>
