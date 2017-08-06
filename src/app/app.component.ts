@@ -18,6 +18,11 @@ export class AppComponent {
     new Hero(4, 'Luffy')
   ];
 
-  myHero = this.heroes[0];
+  selectedHero = null;
+  // selectedHero: Hero;
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 
 }
