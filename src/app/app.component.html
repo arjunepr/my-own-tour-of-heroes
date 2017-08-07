@@ -1,36 +1,11 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div *ngIf="heroes" class="content">
-
-  <h1>{{title}}</h1>
+<div class="content">
+  <h1>{{ title }}</h1>
   
-  <!-- <div class="details" *ngIf="selectedHero">
-    <h2>'{{selectedHero.name}}' details</h2>
-    <div>
-      <label>id: </label> {{ selectedHero.id }}
-    </div>
+  <!-- <nav class="navigation">
+    <a routerLink="/heroes">Heroes</a>
+  </nav> -->
 
-    <div>
-      <label>name: </label>
-      <input [(ngModel)]="selectedHero.name" placeholder="name" />
-    </div>
-  </div> -->
+  <app-navbar></app-navbar>
 
-  <hero-detail [hero]="selectedHero"></hero-detail>
-
-  <h3>Heroes:</h3>
-  <ul class="heroes">
-    <li class="heroItem" [class.selected]="hero === selectedHero" (click)="onSelect(hero)" *ngFor="let hero of heroes">
-      <!-- <div class="details">
-        <h4>{{ hero.name }} details</h4>
-        <p><label>id: </label>{{ hero.id }}</p>
-        <p>
-          <label>name: </label>{{ hero.name }}
-          <input [(ngModel)]="hero.name" placeholder="name">
-        </p>
-      </div> -->
-       <span class="badge">{{ hero.id }}</span> <span>{{ hero.name }}</span> 
-    </li>
-  </ul>
-  <p style="text-align: center" *ngIf="heroes.length > 3">There's quite a few heroes here.</p>
-
+  <router-outlet></router-outlet>
 </div>

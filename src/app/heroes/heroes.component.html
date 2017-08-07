@@ -1,0 +1,16 @@
+<div *ngIf="heroes" class="content">
+
+  <h1>{{title}}</h1>
+
+
+  <hero-detail [hero]="selectedHero"></hero-detail>
+
+  <h3>Heroes:</h3>
+  <ul class="heroes">
+    <li class="heroItem" [class.selected]="hero === selectedHero" (click)="onSelect(hero)" *ngFor="let hero of heroes">
+       <span class="badge">{{ hero.id }}</span> <span>{{ hero.name }}</span> 
+    </li>
+  </ul>
+  <p style="text-align: center" *ngIf="heroes.length > 3">There's quite a few heroes here.</p>
+
+</div>
