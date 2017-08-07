@@ -9,7 +9,7 @@ export class HeroService {
   constructor() { }
 
   // TODO: Get Heroes data.
-  getHeroes(): Hero[] {
-    return HEROES;
+  getHeroes(): Promise<Hero[]> {
+    return Promise.resolve(HEROES);
   }
 }
