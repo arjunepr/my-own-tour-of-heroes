@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes().then(data => this.heroes = data);
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
 
   ngOnInit(): void {
