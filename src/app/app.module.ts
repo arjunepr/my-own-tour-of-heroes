@@ -10,6 +10,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroService } from './hero.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroItemComponent } from './hero-item/hero-item.component';
 
 const RouterConfig = RouterModule.forRoot([
   {
@@ -34,7 +35,8 @@ const RouterConfig = RouterModule.forRoot([
     HeroDetailComponent,
     HeroesComponent,
     NavbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeroItemComponent
   ],
   imports: [
     BrowserModule,

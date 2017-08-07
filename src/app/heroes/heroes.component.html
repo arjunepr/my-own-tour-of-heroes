@@ -8,7 +8,8 @@
   <h3>Heroes:</h3>
   <ul class="heroes">
     <li class="heroItem" [class.selected]="hero === selectedHero" (click)="onSelect(hero)" *ngFor="let hero of heroes">
-       <span class="badge">{{ hero.id }}</span> <span>{{ hero.name }}</span> 
+       <!-- <span class="badge">{{ hero.id }}</span> <span>{{ hero.name }}</span>  -->
+       <hero-item [hero]="hero"></hero-item>
     </li>
   </ul>
   <p style="text-align: center" *ngIf="heroes.length > 3">There's quite a few heroes here.</p>
