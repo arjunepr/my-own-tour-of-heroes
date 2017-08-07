@@ -9,11 +9,21 @@ import { HeroesComponent } from './heroes/heroes.component';
 
 import { HeroService } from './hero.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const RouterConfig = RouterModule.forRoot([
   {
     path: 'heroes',
     component: HeroesComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
   }
 ]);
 
@@ -23,7 +33,8 @@ const RouterConfig = RouterModule.forRoot([
     AppComponent,
     HeroDetailComponent,
     HeroesComponent,
-    NavbarComponent
+    NavbarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

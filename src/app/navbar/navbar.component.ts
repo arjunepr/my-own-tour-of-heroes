@@ -10,7 +10,8 @@ import { Navlink as NavLink } from '../navlink';
 export class NavbarComponent {
 
   public NavLinks: NavLink[] = [
-    new NavLink('/heroes', 'Heroes')
+    new NavLink('/heroes', 'Heroes'),
+    new NavLink('/dashboard', 'Dashboard')
   ];
 
   constructor() { }
